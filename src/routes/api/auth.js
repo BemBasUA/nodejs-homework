@@ -8,8 +8,6 @@ const { authController } = require("../../controllers/index");
 
 const { authenticate } = require("../../middlewares/index");
 
-module.exports = router;
-
 router.post("/register", schemas.authValidation, authController.register);
 
 router.post(
@@ -22,3 +20,5 @@ router.post(
 router.get("/current", authenticate, authController.getCurrent);
 
 router.post("/logout", authenticate, authController.logout);
+
+module.exports = router;
