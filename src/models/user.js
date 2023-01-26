@@ -19,6 +19,9 @@ const userSchema = new Schema({
   token: {
     type: String,
   },
+  avatarURL: {
+    type: String,
+  },
 });
 
 const authValidation = (req, res, next) => {
