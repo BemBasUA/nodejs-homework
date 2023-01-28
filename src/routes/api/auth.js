@@ -10,6 +10,8 @@ const { authenticate } = require("../../middlewares/index");
 
 router.post("/register", schemas.authValidation, authController.register);
 
+router.get("/verify/:verificationToken", authController.verify);
+
 router.post(
   "/login",
 
